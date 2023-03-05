@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SocialMediaApplication</string>
+    <string name="use_a_local_account_to_log_in">Use a local account to log-in!</string>
+    <string name="add_your_email">Add your email...</string>
+    <string name="add_your_password">Add your password...</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+</resources>
