@@ -24,15 +24,6 @@ The minimum requirements for the realization of the project are:
 - Added firebase authentication.
 - Have 3 activities: Register activity , Login activity and Main Dashboard activity.
 
-**Register activity:**
-
-![image](https://user-images.githubusercontent.com/72825756/224486492-39670a0b-7d50-47a4-a984-f65568a43c26.png)
-
-**Login activity:**
-
-![image](https://user-images.githubusercontent.com/72825756/224486576-1f9b830c-47c8-415d-9140-ad91521aca80.png)
-
-
 # About LittleDuck team
 ---------------------------
 Team Members: Ciontu Claudia-Elena and Draghici Andreea-Maria
