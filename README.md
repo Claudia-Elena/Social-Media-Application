@@ -21,6 +21,7 @@ The minimum requirements for the realization of the project are:
 
 **Delivery 1:**
 
+- Added firebase authentication.
 - Have 3 activities: Register activity , Login activity and Main Dashboard activity.
 
 # About LittleDuck team
