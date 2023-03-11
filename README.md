@@ -31,3 +31,4 @@ Group: CR4.S1A
 1. Firebase: https://firebase.google.com/docs?gclid=Cj0KCQiA6rCgBhDVARIsAK1kGPJDEAQY7jARlhRgXLaJu5dltJJAtnEG1gVunA9_Tl326xqwlyqbOE0aAi14EALw_wcB&gclsrc=aw.ds
 2. Android fundamentals: https://developer.android.com/codelabs/android-training-hello-world#0
 3. ECommerce App in Android Studio(Java, Firebase, etc): https://youtu.be/BXAU1HUy2Yk
+4. Introduction To Firestore In Firebase Cloud: c-sharpcorner.com/article/introduction-to-firestore-in-firebase-cloud-part-1/#:~:text=Tables%20can%20be%20create%20on,click%20on%20the%20Next%20button.&text=Once%20the%20table%20name%20is,field%20type%20and%20default%20value.
