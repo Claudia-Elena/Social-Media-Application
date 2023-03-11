@@ -4,4 +4,11 @@
     <string name="add_your_email">Add your email...</string>
     <string name="add_your_password">Add your password...</string>
     <string name="forgot_your_password">Forgot your password?</string>
+    <string name="email">Email</string>
+    <string name="log_in">Log in</string>
+    <string name="register_as_a_new_user">Register as a new user</string>
+    <string name="password">Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="your_name">Your Name...</string>
+    <string name="already_have_a_account_sign_in">Already Have a Account? Sign In</string>
 </resources>

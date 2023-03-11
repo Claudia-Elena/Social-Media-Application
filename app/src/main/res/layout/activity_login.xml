@@ -22,7 +22,7 @@
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="90dp"
                 android:text="@string/use_a_local_account_to_log_in"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorGreen"
                 android:textSize="18sp"
                 android:textStyle="italic|bold" />
 
@@ -33,8 +33,8 @@
                 android:layout_below="@id/welcom"
                 android:layout_marginStart="35dp"
                 android:layout_marginTop="73dp"
-                android:text="Email"
-                android:textColor="@color/colorBlack" />
+                android:text="@string/email"
+                android:textColor="@color/colorRed" />
 
             <EditText
                 android:id="@+id/login_email"
@@ -46,11 +46,12 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/edit"
-                android:drawableStart="@drawable/ic_email"
                 android:hint="@string/add_your_email"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
-                android:padding="8dp" />
+                android:padding="8dp"
+                android:textColorHint="#CF125E"
+                android:autofillHints="" />
 
             <TextView
                 android:id="@+id/password"
@@ -59,8 +60,8 @@
                 android:layout_below="@id/login_email"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="20dp"
-                android:text="Password"
-                android:textColor="@color/colorBlack" />
+                android:text="@string/password"
+                android:textColor="@color/colorRed" />
 
             <EditText
                 android:id="@+id/login_password"
@@ -72,11 +73,13 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/edit"
-                android:drawableStart="@drawable/password"
                 android:hint="@string/add_your_password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
-                android:padding="8dp" />
+                android:padding="8dp"
+                android:textColorHint="#CF125E"
+                android:autofillHints=""
+                android:importantForAutofill="no" />
 
             <TextView
                 android:id="@+id/forgetp"
@@ -102,7 +105,7 @@
                 android:layout_marginRight="30dp"
                 android:background="@drawable/buttons"
                 android:padding="4dp"
-                android:text="Log in"
+                android:text="@string/log_in"
                 android:textAllCaps="false"
                 android:textColor="@android:color/background_light"
                 android:textSize="24sp" />
@@ -116,7 +119,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="23dp"
-                android:text="Register as a new user"
+                android:text="@string/register_as_a_new_user"
                 android:textAlignment="center"
                 android:textColor="@color/colorAccent"
                 android:textSize="17sp"

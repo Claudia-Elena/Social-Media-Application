@@ -1,5 +1,7 @@
 plugins {
     id 'com.android.application'
+// Add the Google services Gradle plugin
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -30,6 +32,9 @@ android {
 
 dependencies {
 
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:31.2.3')
+
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -38,22 +43,22 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    implementation 'com.google.firebase:firebase-auth:21.0.3'
-    implementation 'com.google.firebase:firebase-database:20.0.4'
-    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    // TODO: Add the dependencies for Firebase products you want to use
+    // For example, add the dependencies for Firebase Authentication and Cloud Firestore
+    implementation 'com.google.firebase:firebase-auth:21.1.0'
+    implementation 'com.google.firebase:firebase-firestore:24.4.4'
+    implementation 'com.google.firebase:firebase-database:20.1.0'
+    implementation 'com.google.firebase:firebase-storage:20.1.0'
+
+    // Add the dependency for the Firebase SDK for Google Analytics
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics'
+
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
-    implementation 'com.google.firebase:firebase-storage:20.0.1'
+
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
-    implementation platform('com.google.firebase:firebase-bom:29.3.1')
-
-    implementation 'com.google.firebase:firebase-storage'
-    implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-messaging:23.0.0'
-    implementation 'androidx.work:work-runtime:2.7.1'
-    implementation platform('com.google.firebase:firebase-bom')
-    implementation 'com.google.firebase:firebase-iid:21.1.0'
-    implementation 'androidx.work:work-runtime-ktx:2.8.0-alpha01'
+    implementation 'androidx.work:work-runtime:2.8.0'
 }
