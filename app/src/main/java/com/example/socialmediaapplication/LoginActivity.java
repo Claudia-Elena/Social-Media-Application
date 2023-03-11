@@ -27,19 +27,23 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public class LoginActivity extends AppCompatActivity {
-    private EditText email, password, name;
+    private EditText email;
+    private EditText password;
+
     private Button mlogin;
     private TextView newAccount, recoverPassword;
     FirebaseUser currentUser;
+
     private ProgressDialog loadingBar;
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_login);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Create Account");
+        Objects.requireNonNull(actionBar).setTitle("Create Account");
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
@@ -50,8 +54,8 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mlogin = findViewById(R.id.login_button);
         loadingBar = new ProgressDialog(this);
-        mAuth = FirebaseAuth.getInstance();
 
+        mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
 
         mlogin.setOnClickListener(v -> {
@@ -74,6 +78,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void showRecoverPasswordDialog() {
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Recover Password");
         LinearLayout linearLayout = new LinearLayout(this);
@@ -81,9 +86,11 @@ public class LoginActivity extends AppCompatActivity {
         emailet.setText("Email");
         emailet.setMinEms(16);
         emailet.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+
         linearLayout.addView(emailet);
         linearLayout.setPadding(10, 10, 10, 10);
         builder.setView(linearLayout);
+
         builder.setPositiveButton("Recover", (dialog, which) -> {
             String emaill = emailet.getText().toString().trim();
             beginRecovery(emaill);//send a mail on the mail to recover password
