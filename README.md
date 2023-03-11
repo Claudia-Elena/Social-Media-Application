@@ -18,7 +18,7 @@ The minimum requirements for the realization of the project are:
 -------------------
 
 - Using Firebase Cloud to hosting services.
-- Have 3 activities: Register , Login and Dashboard.
+- Have 3 activities: Register activity , Login activity and Main Dashboard activity.
 
 # About LittleDuck team
 ---------------------------
