@@ -1,6 +1,4 @@
 # Social-Media-Application
-Developed using Java as Programming Language and Android Studio as IDE.
-
 
 # Requirments
 -----------------
@@ -19,6 +17,7 @@ The minimum requirements for the realization of the project are:
 
 - Using Firebase Cloud to hosting services.
 - Have 3 activities: Register activity , Login activity and Main Dashboard activity.
+- Developed using Java as Programming Language and Android Studio as IDE.
 
 # About LittleDuck team
 ---------------------------
