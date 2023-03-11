@@ -1,6 +1,6 @@
 # Social-Media-Application
 
-# Requirments
+# Requirments:
 -----------------
 The minimum requirements for the realization of the project are:
 
@@ -12,7 +12,7 @@ The minimum requirements for the realization of the project are:
 
 - To use at least one Worker thread - asynchronous task.
 
-# Project Details
+# Project Details:
 -------------------
 
 - Developed using Java as Programming Language and Android Studio as IDE.
@@ -24,13 +24,13 @@ The minimum requirements for the realization of the project are:
 - Added firebase authentication.
 - Have 3 activities: Register activity , Login activity and Main Dashboard activity.
 
-# About LittleDuck team
+# About LittleDuck team:
 ---------------------------
 Team Members: Ciontu Claudia-Elena and Draghici Andreea-Maria
 
 Group: CR4.S1A
 
-# Resources
+# Resources:
 ---------
 1. Firebase: https://firebase.google.com/docs?gclid=Cj0KCQiA6rCgBhDVARIsAK1kGPJDEAQY7jARlhRgXLaJu5dltJJAtnEG1gVunA9_Tl326xqwlyqbOE0aAi14EALw_wcB&gclsrc=aw.ds
 2. Android fundamentals: https://developer.android.com/codelabs/android-training-hello-world#0
