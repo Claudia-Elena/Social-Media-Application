@@ -12,4 +12,7 @@
     <string name="your_name">Your Name...</string>
     <string name="already_have_a_account_sign_in">Already Have a Account? Sign In</string>
     <string name="sign_up_here">Sign-Up Here</string>
+    <string name="home">Home</string>
+    <string name="add_posts">Add Posts</string>
+    <string name="profile">Profile</string>
 </resources>
