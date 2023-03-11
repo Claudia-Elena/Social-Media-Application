@@ -15,9 +15,13 @@ The minimum requirements for the realization of the project are:
 # Project Details
 -------------------
 
-- Using Firebase Cloud to hosting services.
-- Have 3 activities: Register activity , Login activity and Main Dashboard activity.
 - Developed using Java as Programming Language and Android Studio as IDE.
+
+- Using Firebase Cloud to hosting services.
+
+Delivery 1:
+
+- Have 3 activities: Register activity , Login activity and Main Dashboard activity.
 
 # About LittleDuck team
 ---------------------------
