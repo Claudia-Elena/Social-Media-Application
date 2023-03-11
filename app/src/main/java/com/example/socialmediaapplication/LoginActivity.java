@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_login);
         ActionBar actionBar = getSupportActionBar();
-        Objects.requireNonNull(actionBar).setTitle("Create Account");
+        Objects.requireNonNull(actionBar).setTitle("Login into account");
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
