@@ -12,7 +12,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        android:text="Sign-Up Here"
+        android:text="@string/sign_up_here"
         android:textColor="@color/colorGreen"
         android:textSize="28sp"
         android:textStyle="bold|italic" />
@@ -36,9 +36,10 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/edit"
+        android:background="@color/colorGreen"
         android:hint="@string/your_name"
         android:inputType="text"
+        android:textColorHint="@color/black"
         android:padding="8dp" />
 
     <TextView
@@ -60,8 +61,9 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/edit"
+        android:background="@color/colorGreen"
         android:hint="Email..."
+        android:textColorHint="@color/black"
         android:inputType="textEmailAddress"
         android:padding="8dp" />
 
@@ -84,8 +86,9 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/edit"
+        android:background="@color/colorGreen"
         android:hint="Password..."
+        android:textColorHint="@color/black"
         android:inputType="textPassword"
         android:padding="8dp" />
 

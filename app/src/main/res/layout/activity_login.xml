@@ -17,8 +17,8 @@
 
             <TextView
                 android:id="@+id/welcom"
-                android:layout_width="257dp"
-                android:layout_height="69dp"
+                android:layout_width="262dp"
+                android:layout_height="65dp"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="90dp"
                 android:text="@string/use_a_local_account_to_log_in"
@@ -45,12 +45,12 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="30dp"
-                android:background="@drawable/edit"
+                android:background="@color/colorGreen"
                 android:hint="@string/add_your_email"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
                 android:padding="8dp"
-                android:textColorHint="#CF125E"
+                android:textColorHint="@color/black"
                 android:autofillHints="" />
 
             <TextView
@@ -72,12 +72,12 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="30dp"
-                android:background="@drawable/edit"
+                android:background="@color/colorGreen"
                 android:hint="@string/add_your_password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
                 android:padding="8dp"
-                android:textColorHint="#CF125E"
+                android:textColorHint="@color/black"
                 android:autofillHints=""
                 android:importantForAutofill="no" />
 
