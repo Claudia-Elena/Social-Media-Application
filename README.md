@@ -23,6 +23,7 @@ The minimum requirements for the realization of the project are:
 # About LittleDuck team
 ---------------------------
 Team Members: Ciontu Claudia-Elena and Draghici Andreea-Maria
+
 Group: CR4.S1A
 
 # Resources
