@@ -2,7 +2,7 @@
 Developed using Java as Programming Language and Android Studio as IDE.
 
 
-# Task Details
+# Requirments
 -----------------
 The minimum requirements for the realization of the project are:
 
@@ -14,8 +14,12 @@ The minimum requirements for the realization of the project are:
 
 - To use at least one Worker thread - asynchronous task.
 
+# Project Details
+-------------------
+
 
 # About LittleDuck team
 ---------------------------
 Team Members: Ciontu Claudia-Elena and Draghici Andreea-Maria
+Group: CR4.S1A
 
