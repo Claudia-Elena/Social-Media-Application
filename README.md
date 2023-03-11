@@ -17,9 +17,15 @@ The minimum requirements for the realization of the project are:
 # Project Details
 -------------------
 
+- Using Firebase Cloud to hosting services.
+- Have 3 activities: Register , Login and Dashboard.
 
 # About LittleDuck team
 ---------------------------
 Team Members: Ciontu Claudia-Elena and Draghici Andreea-Maria
 Group: CR4.S1A
 
+# Resources
+---------
+1. Firebase: https://firebase.google.com/docs?gclid=Cj0KCQiA6rCgBhDVARIsAK1kGPJDEAQY7jARlhRgXLaJu5dltJJAtnEG1gVunA9_Tl326xqwlyqbOE0aAi14EALw_wcB&gclsrc=aw.ds
+2. Android fundamentals: https://developer.android.com/codelabs/android-training-hello-world#0
