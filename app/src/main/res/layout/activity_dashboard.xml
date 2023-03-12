@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".board.DashboardActivity">
+    tools:context=".service.board.DashboardActivity">
 
     <FrameLayout
         android:id="@+id/content"

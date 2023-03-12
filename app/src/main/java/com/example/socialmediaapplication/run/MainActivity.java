@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.example.socialmediaapplication.R;
-import com.example.socialmediaapplication.authentication.LoginActivity;
-import com.example.socialmediaapplication.authentication.RegistrationActivity;
+import com.example.socialmediaapplication.service.authentication.LoginActivity;
+import com.example.socialmediaapplication.service.authentication.RegistrationActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 

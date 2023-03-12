@@ -1,4 +1,4 @@
-package com.example.socialmediaapplication.authentication;
+package com.example.socialmediaapplication.service.authentication;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -16,7 +16,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.socialmediaapplication.board.DashboardActivity;
+import com.example.socialmediaapplication.service.board.DashboardActivity;
 import com.example.socialmediaapplication.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
