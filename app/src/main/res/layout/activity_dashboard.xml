@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/material_dynamic_tertiary80"
+        android:background="@color/colorRed"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_nav">
 
