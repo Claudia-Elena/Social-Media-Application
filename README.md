@@ -36,3 +36,4 @@ Group: CR4.S1A
 2. Android fundamentals: https://developer.android.com/codelabs/android-training-hello-world#0
 3. ECommerce App in Android Studio(Java, Firebase, etc): https://youtu.be/BXAU1HUy2Yk
 4. Introduction To Firestore In Firebase Cloud:https://www.c-sharpcorner.com/article/introduction-to-firestore-in-firebase-cloud-part-1/#:~:text=Tables%20can%20be%20create%20on,click%20on%20the%20Next%20button.&text=Once%20the%20table%20name%20is,field%20type%20and%20default%20value.
+5. Social Media App Example: https://github.com/charanhu/Twinsta_Book_Application

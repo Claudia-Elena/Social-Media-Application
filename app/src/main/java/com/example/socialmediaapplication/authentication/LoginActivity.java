@@ -61,16 +61,16 @@ public class LoginActivity extends AppCompatActivity {
         currentUser = mAuth.getCurrentUser();
 
         mlogin.setOnClickListener(v -> {
-            String emaill = email.getText().toString().trim();
+            String mail = email.getText().toString().trim();
             String pass = password.getText().toString().trim();
 
             // if format of email doesn't matches return null
-            if (!Patterns.EMAIL_ADDRESS.matcher(emaill).matches()) {
+            if (!Patterns.EMAIL_ADDRESS.matcher(mail).matches()) {
                 email.setError("Invalid Email");
                 email.setFocusable(true);
 
             } else {
-                loginUser(emaill, pass);
+                loginUser(mail, pass);
             }
         });
 
@@ -93,45 +93,37 @@ public class LoginActivity extends AppCompatActivity {
         linearLayout.setPadding(10, 10, 10, 10);
         builder.setView(linearLayout);
 
-        builder.setPositiveButton("Recover", (dialog, which) -> {
-            String emaill = emailet.getText().toString().trim();
-            beginRecovery(emaill);//send a mail on the mail to recover password
+        builder.setPositiveButton("Recover Pass", (dialog, which) -> {
+            String mail = emailet.getText().toString().trim();
+            beginRecovery(mail);//send a mail message on the mail to recover the password
         });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
+        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
         builder.create().show();
     }
 
-    private void beginRecovery(String emaill) {
+    private void beginRecovery(String mail) {
         loadingBar.setMessage("Sending Email....");
         loadingBar.setCanceledOnTouchOutside(false);
         loadingBar.show();
 
-        mAuth.sendPasswordResetEmail(emaill).addOnCompleteListener(task -> {
+        mAuth.sendPasswordResetEmail(mail).addOnCompleteListener(task -> {
             loadingBar.dismiss();
             if (task.isSuccessful()) {
                 Toast.makeText(LoginActivity.this, "Done sent", Toast.LENGTH_LONG).show();
             } else {
                 Toast.makeText(LoginActivity.this, "Error Occurred", Toast.LENGTH_LONG).show();
             }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                loadingBar.dismiss();
-                Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
-            }
+        }).addOnFailureListener(e -> {
+            loadingBar.dismiss();
+            Toast.makeText(LoginActivity.this, "Login Failed!", Toast.LENGTH_LONG).show();
         });
     }
 
-    private void loginUser(String emaill, String pass) {
+    private void loginUser(String mail, String password) {
         loadingBar.setMessage("Logging In....");
         loadingBar.show();
 
-        mAuth.signInWithEmailAndPassword(emaill, pass).addOnCompleteListener(task -> {
+        mAuth.signInWithEmailAndPassword(mail, password).addOnCompleteListener(task -> {
 
             if (task.isSuccessful()) {
 
@@ -139,24 +131,26 @@ public class LoginActivity extends AppCompatActivity {
                 FirebaseUser user = mAuth.getCurrentUser();
 
                 if (Objects.requireNonNull(task.getResult().getAdditionalUserInfo()).isNewUser()) {
+
                     String email = Objects.requireNonNull(user).getEmail();
-                    String uid = user.getUid();
-                    HashMap<Object, String> hashMap = new HashMap<>();
-                    hashMap.put("email", email);
-                    hashMap.put("uid", uid);
-                    hashMap.put("name", "");
-                    hashMap.put("onlineStatus", "online");
-                    hashMap.put("typingTo", "noOne");
-                    hashMap.put("phone", "");
-                    hashMap.put("image", "");
-                    hashMap.put("cover", "");
+                    String userId = user.getUid();
+
+                    HashMap<Object, String> hashMapModel = new HashMap<>();
+                    hashMapModel.put("email", email);
+                    hashMapModel.put("uid", userId);
+                    hashMapModel.put("name", "");
+                    hashMapModel.put("onlineStatus", "online");
+                    hashMapModel.put("typingTo", "noOne");
+                    hashMapModel.put("phone", "");
+                    hashMapModel.put("image", "");
+                    hashMapModel.put("cover", "");
+
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-
                     DatabaseReference reference = database.getReference("Users");
-
-                    reference.child(uid).setValue(hashMap);
+                    reference.child(userId).setValue(hashMapModel);
                 }
-                Toast.makeText(LoginActivity.this, "Registered User " + Objects.requireNonNull(user).getEmail(), Toast.LENGTH_LONG).show();
+
+                Toast.makeText(LoginActivity.this, "Login User " + Objects.requireNonNull(user).getEmail(), Toast.LENGTH_LONG).show();
                 Intent mainIntent = new Intent(LoginActivity.this, DashboardActivity.class);
                 mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(mainIntent);

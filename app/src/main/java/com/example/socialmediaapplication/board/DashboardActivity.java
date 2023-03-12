@@ -13,6 +13,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.Objects;
+
 public class DashboardActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
@@ -25,7 +27,7 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         actionBar = getSupportActionBar();
-        actionBar.setTitle("Profile Activity");
+        Objects.requireNonNull(actionBar).setTitle("Profile Activity");
         firebaseAuth = FirebaseAuth.getInstance();
 
         navigationView = findViewById(R.id.navigation);
@@ -34,7 +36,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     }
 
-    private BottomNavigationView.OnItemSelectedListener selectedListener = new BottomNavigationView.OnItemSelectedListener() {
+    private final BottomNavigationView.OnItemSelectedListener selectedListener = new BottomNavigationView.OnItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
             switch (menuItem.getItemId()) {

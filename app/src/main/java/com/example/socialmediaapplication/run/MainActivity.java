@@ -1,4 +1,4 @@
-package com.example.socialmediaapplication;
+package com.example.socialmediaapplication.run;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.socialmediaapplication.R;
 import com.example.socialmediaapplication.authentication.LoginActivity;
 import com.example.socialmediaapplication.authentication.RegistrationActivity;
 import com.google.firebase.auth.FirebaseAuth;

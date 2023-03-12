@@ -52,49 +52,54 @@ public class RegistrationActivity extends AppCompatActivity {
         progressDialog.setMessage("Register");
 
         mRegister.setOnClickListener(v -> {
-            String emaill = email.getText().toString().trim();
+
+            String mail = email.getText().toString().trim();
             String uname = name.getText().toString().trim();
             String pass = password.getText().toString().trim();
 
-            if (!Patterns.EMAIL_ADDRESS.matcher(emaill).matches()) {
+            if (!Patterns.EMAIL_ADDRESS.matcher(mail).matches()) {
                 email.setError("Invalid Email");
                 email.setFocusable(true);
             } else if (pass.length() < 6) {
                 password.setError("Length Must be greater than 6 character");
                 password.setFocusable(true);
             } else {
-                registerUser(emaill, pass, uname);
+                registerUser(mail, pass, uname);
             }
         });
         existAccount.setOnClickListener(v -> startActivity(new Intent(RegistrationActivity.this, LoginActivity.class)));
     }
 
-    private void registerUser(String emaill, final String pass, final String uname) {
+    private void registerUser(String mail, final String password, final String userName) {
+
         progressDialog.show();
-        mAuth.createUserWithEmailAndPassword(emaill, pass).addOnCompleteListener(task -> {
+        mAuth.createUserWithEmailAndPassword(mail, password).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
 
                 progressDialog.dismiss();
                 FirebaseUser user = mAuth.getCurrentUser();
                 String email = Objects.requireNonNull(user).getEmail();
-                String uid = user.getUid();
+                String userID = user.getUid();
 
                 HashMap<Object, String> hashMap = new HashMap<>();
                 hashMap.put("email", email);
-                hashMap.put("uid", uid);
-                hashMap.put("name", uname);
+                hashMap.put("uid", userID);
+                hashMap.put("name", userName);
                 hashMap.put("onlineStatus", "online");
                 hashMap.put("typingTo", "noOne");
                 hashMap.put("image", "");
 
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference reference = database.getReference("Users");
-                reference.child(uid).setValue(hashMap);
+
+                reference.child(userID).setValue(hashMap);
                 Toast.makeText(RegistrationActivity.this, "Registered User " + user.getEmail(), Toast.LENGTH_LONG).show();
+
                 Intent mainIntent = new Intent(RegistrationActivity.this, DashboardActivity.class);
                 mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(mainIntent);
                 finish();
+
             } else {
                 progressDialog.dismiss();
                 Toast.makeText(RegistrationActivity.this, "Error", Toast.LENGTH_LONG).show();
