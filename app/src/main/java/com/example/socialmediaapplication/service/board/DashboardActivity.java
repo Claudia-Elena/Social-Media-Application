@@ -1,4 +1,4 @@
-package com.example.socialmediaapplication.board;
+package com.example.socialmediaapplication.service.board;
 
 import android.os.Bundle;
 import android.view.MenuItem;

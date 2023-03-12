@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".board.DashboardActivity">
+    tools:context=".service.board.DashboardActivity">
 
     <FrameLayout
         android:id="@+id/content"
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/material_dynamic_tertiary80"
+        android:background="@color/colorRed"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_nav">
 
