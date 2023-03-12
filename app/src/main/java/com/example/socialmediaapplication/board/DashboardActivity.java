@@ -1,4 +1,4 @@
-package com.example.socialmediaapplication;
+package com.example.socialmediaapplication.board;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -8,6 +8,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.socialmediaapplication.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -18,9 +19,9 @@ public class DashboardActivity extends AppCompatActivity {
     ActionBar actionBar;
     BottomNavigationView navigationView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         actionBar = getSupportActionBar();
@@ -28,6 +29,33 @@ public class DashboardActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         navigationView = findViewById(R.id.navigation);
-        actionBar.setTitle("Home");
+        navigationView.setOnItemSelectedListener(selectedListener);
+        actionBar.setTitle("Home Activity");
+
     }
+
+    private BottomNavigationView.OnItemSelectedListener selectedListener = new BottomNavigationView.OnItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            switch (menuItem.getItemId()) {
+
+                case R.id.nav_home:
+                    actionBar.setTitle("Home Page");
+
+                    return true;
+
+                case R.id.nav_profile:
+                    actionBar.setTitle("Profile User Page");
+
+                    return true;
+
+                case R.id.nav_addblogs:
+                    actionBar.setTitle("Add Posts on Dashboard Page");
+
+                    return true;
+
+            }
+            return false;
+        }
+    };
 }
