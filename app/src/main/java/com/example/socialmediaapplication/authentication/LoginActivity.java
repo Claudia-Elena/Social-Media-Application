@@ -1,4 +1,4 @@
-package com.example.socialmediaapplication;
+package com.example.socialmediaapplication.authentication;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -17,6 +17,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.socialmediaapplication.board.DashboardActivity;
+import com.example.socialmediaapplication.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
