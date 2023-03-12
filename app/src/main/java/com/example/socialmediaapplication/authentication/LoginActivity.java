@@ -3,7 +3,6 @@ package com.example.socialmediaapplication.authentication;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
@@ -14,13 +13,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.socialmediaapplication.board.DashboardActivity;
 import com.example.socialmediaapplication.R;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -53,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.login_email);
         password = findViewById(R.id.login_password);
         newAccount = findViewById(R.id.needs_new_account);
-        recoverPassword = findViewById(R.id.forgetp);
+        recoverPassword = findViewById(R.id.forget_password);
         mAuth = FirebaseAuth.getInstance();
         mlogin = findViewById(R.id.login_button);
         loadingBar = new ProgressDialog(this);

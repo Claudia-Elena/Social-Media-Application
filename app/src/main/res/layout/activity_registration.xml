@@ -10,9 +10,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="23dp"
         android:gravity="center"
         android:text="@string/sign_up_here"
+        android:background="@color/material_dynamic_primary90"
         android:textColor="@color/colorGreen"
         android:textSize="28sp"
         android:textStyle="bold|italic" />
@@ -23,8 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/teacher"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="120dp"
-        android:text="Name"
+        android:layout_marginTop="90dp"
+        android:text="USER NAME"
         android:textColor="@color/colorRed" />
 
     <EditText
@@ -36,7 +39,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:background="@color/colorGreen"
+        android:background="@color/teal_200"
         android:hint="@string/your_name"
         android:inputType="text"
         android:textColorHint="@color/black"
@@ -49,7 +52,7 @@
         android:layout_below="@id/register_name"
         android:layout_marginStart="35dp"
         android:layout_marginTop="10dp"
-        android:text="Email"
+        android:text="EMAIL"
         android:textColor="@color/colorRed" />
 
     <EditText
@@ -61,8 +64,8 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:background="@color/colorGreen"
-        android:hint="Email..."
+        android:background="@color/teal_200"
+        android:hint="ADD YOUR EMAIL..."
         android:textColorHint="@color/black"
         android:inputType="textEmailAddress"
         android:padding="8dp" />
@@ -74,7 +77,7 @@
         android:layout_below="@id/register_email"
         android:layout_marginStart="35dp"
         android:layout_marginTop="10dp"
-        android:text="Password"
+        android:text="PASSWORD"
         android:textColor="@color/colorRed" />
 
     <EditText
@@ -86,8 +89,8 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:background="@color/colorGreen"
-        android:hint="Password..."
+        android:background="@color/teal_200"
+        android:hint="ADD YOUR PASSWORD..."
         android:textColorHint="@color/black"
         android:inputType="textPassword"
         android:padding="8dp" />
@@ -98,9 +101,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_password"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="45dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/buttons"
+        android:background="@drawable/common_google_signin_btn_icon_light"
         android:padding="4dp"
         android:text="@string/create_account"
         android:textAllCaps="false"
@@ -114,11 +117,12 @@
         android:layout_below="@+id/register_button"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="23dp"
         android:text="@string/already_have_a_account_sign_in"
         android:textAlignment="center"
         android:textColor="@color/colorBlack"
+        android:background="@color/material_dynamic_primary90"
         android:textSize="17sp"
         android:textStyle="bold" />
 
