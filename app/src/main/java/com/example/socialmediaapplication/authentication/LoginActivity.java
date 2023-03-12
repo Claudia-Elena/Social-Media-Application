@@ -1,5 +1,6 @@
 package com.example.socialmediaapplication.authentication;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -61,17 +62,7 @@ public class LoginActivity extends AppCompatActivity {
         currentUser = mAuth.getCurrentUser();
 
         mlogin.setOnClickListener(v -> {
-            String mail = email.getText().toString().trim();
-            String pass = password.getText().toString().trim();
-
-            // if format of email doesn't matches return null
-            if (!Patterns.EMAIL_ADDRESS.matcher(mail).matches()) {
-                email.setError("Invalid Email");
-                email.setFocusable(true);
-
-            } else {
-                loginUser(mail, pass);
-            }
+            getUserCredentials();
         });
 
         newAccount.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegistrationActivity.class)));
@@ -79,22 +70,38 @@ public class LoginActivity extends AppCompatActivity {
         recoverPassword.setOnClickListener(v -> showRecoverPasswordDialog());
     }
 
+    private void getUserCredentials() {
+        String mail = email.getText().toString().trim();
+        String pass = password.getText().toString().trim();
+
+        // if format of email doesn't matches return null
+        if (!Patterns.EMAIL_ADDRESS.matcher(mail).matches()) {
+            email.setError("Invalid Email");
+            email.setFocusable(true);
+
+        } else {
+            loginUser(mail, pass);
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
     private void showRecoverPasswordDialog() {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Recover Password");
         LinearLayout linearLayout = new LinearLayout(this);
-        final EditText emailet = new EditText(this);//write your registered email
-        emailet.setText("Email");
-        emailet.setMinEms(16);
-        emailet.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
 
-        linearLayout.addView(emailet);
+        final EditText mailTextField = new EditText(this);//write your registered email
+        mailTextField.setText("Email");
+        mailTextField.setMinEms(16);
+        mailTextField.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+
+        linearLayout.addView(mailTextField);
         linearLayout.setPadding(10, 10, 10, 10);
         builder.setView(linearLayout);
 
         builder.setPositiveButton("Recover Pass", (dialog, which) -> {
-            String mail = emailet.getText().toString().trim();
+            String mail = mailTextField.getText().toString().trim();
             beginRecovery(mail);//send a mail message on the mail to recover the password
         });
         builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
