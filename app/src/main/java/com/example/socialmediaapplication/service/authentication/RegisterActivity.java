@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Objects;
 
-public class RegistrationActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     private EditText email, password, name;
     private Button mRegister;
@@ -34,7 +34,7 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registration);
+        setContentView(R.layout.activity_register);
         ActionBar actionBar = getSupportActionBar();
 
         Objects.requireNonNull(actionBar).setTitle("Create Account");
@@ -53,21 +53,25 @@ public class RegistrationActivity extends AppCompatActivity {
 
         mRegister.setOnClickListener(v -> {
 
-            String mail = email.getText().toString().trim();
-            String uname = name.getText().toString().trim();
-            String pass = password.getText().toString().trim();
-
-            if (!Patterns.EMAIL_ADDRESS.matcher(mail).matches()) {
-                email.setError("Invalid Email");
-                email.setFocusable(true);
-            } else if (pass.length() < 6) {
-                password.setError("Length Must be greater than 6 character");
-                password.setFocusable(true);
-            } else {
-                registerUser(mail, pass, uname);
-            }
+            getUserCredential();
         });
-        existAccount.setOnClickListener(v -> startActivity(new Intent(RegistrationActivity.this, LoginActivity.class)));
+        existAccount.setOnClickListener(v -> startActivity(new Intent(RegisterActivity.this, LoginActivity.class)));
+    }
+
+    private void getUserCredential() {
+        String mail = email.getText().toString().trim();
+        String uname = name.getText().toString().trim();
+        String pass = password.getText().toString().trim();
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(mail).matches()) {
+            email.setError("Invalid Email");
+            email.setFocusable(true);
+        } else if (pass.length() < 6) {
+            password.setError("Length Must be greater than 6 character");
+            password.setFocusable(true);
+        } else {
+            registerUser(mail, pass, uname);
+        }
     }
 
     private void registerUser(String mail, final String password, final String userName) {
@@ -93,20 +97,20 @@ public class RegistrationActivity extends AppCompatActivity {
                 DatabaseReference reference = database.getReference("Users");
 
                 reference.child(userID).setValue(hashMap);
-                Toast.makeText(RegistrationActivity.this, "Registered User " + user.getEmail(), Toast.LENGTH_LONG).show();
+                Toast.makeText(RegisterActivity.this, "Registered User " + user.getEmail(), Toast.LENGTH_LONG).show();
 
-                Intent mainIntent = new Intent(RegistrationActivity.this, DashboardActivity.class);
+                Intent mainIntent = new Intent(RegisterActivity.this, DashboardActivity.class);
                 mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(mainIntent);
                 finish();
 
             } else {
                 progressDialog.dismiss();
-                Toast.makeText(RegistrationActivity.this, "Error", Toast.LENGTH_LONG).show();
+                Toast.makeText(RegisterActivity.this, "Error", Toast.LENGTH_LONG).show();
             }
         }).addOnFailureListener(e -> {
             progressDialog.dismiss();
-            Toast.makeText(RegistrationActivity.this, "Error Occurred", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this, "Error Occurred", Toast.LENGTH_LONG).show();
         });
     }
 

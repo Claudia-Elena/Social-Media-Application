@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".service.authentication.LoginActivity">
 
     <ScrollView
@@ -22,12 +23,12 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginEnd="23dp"
                 android:gravity="center"
                 android:text="@string/use_a_local_account_to_log_in"
-                android:textColor="@color/colorGreen"
-                android:background="@color/material_dynamic_primary90"
+                android:textColor="@color/black"
+                android:background="@color/colorWhite"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -39,7 +40,8 @@
                 android:layout_marginStart="35dp"
                 android:layout_marginTop="73dp"
                 android:text="@string/email"
-                android:textColor="@color/colorRed" />
+                android:textStyle="bold"
+                android:textColor="@color/purple_700" />
 
             <EditText
                 android:id="@+id/login_email"
@@ -50,7 +52,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="30dp"
-                android:background="@color/teal_200"
+                android:background="@color/btnedit"
                 android:hint="@string/add_your_email"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
@@ -66,7 +68,8 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/password"
-                android:textColor="@color/colorRed" />
+                android:textStyle="bold"
+                android:textColor="@color/purple_700" />
 
             <EditText
                 android:id="@+id/login_password"
@@ -77,7 +80,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="30dp"
-                android:background="@color/teal_200"
+                android:background="@color/btnedit"
                 android:hint="@string/add_your_password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
@@ -94,10 +97,9 @@
                 android:layout_marginStart="210dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="23dp"
-                android:background="@color/material_dynamic_primary90"
                 android:text="@string/forgot_your_password"
                 android:textAlignment="center"
-                android:textColor="@color/colorRed"
+                android:textColor="@color/purple_700"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -123,13 +125,13 @@
                 android:layout_below="@+id/login_button"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="23dp"
                 android:text="@string/register_as_a_new_user"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="17sp"
-                android:background="@color/material_dynamic_primary90"
+                android:background="@color/colorWhite"
                 android:textStyle="bold" />
         </RelativeLayout>
 

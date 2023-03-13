@@ -27,7 +27,7 @@
             android:name=".service.post.PostLikedActivity"
             android:exported="false" />
 
-        <activity android:name=".service.authentication.RegistrationActivity" />
+        <activity android:name=".service.authentication.RegisterActivity" />
         <activity android:name=".service.board.DashboardActivity" />
         <activity android:name=".service.authentication.LoginActivity" />
 
