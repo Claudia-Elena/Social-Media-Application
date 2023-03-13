@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/background"
     tools:context=".service.authentication.RegisterActivity">
+
     <TextView
         android:id="@+id/teacher"
         android:layout_width="match_parent"
@@ -14,9 +15,9 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
+        android:background="@color/colorWhite"
         android:gravity="center"
         android:text="@string/sign_up_here"
-        android:background="@color/colorWhite"
         android:textColor="@color/colorBlack"
         android:textSize="28sp"
         android:textStyle="bold" />
@@ -29,8 +30,8 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="70dp"
         android:text="USER NAME"
-        android:textStyle="bold"
-        android:textColor="@color/purple_700" />
+        android:textColor="@color/purple_700"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/register_name"
@@ -44,8 +45,8 @@
         android:background="@color/btnedit"
         android:hint="@string/your_name"
         android:inputType="text"
-        android:textColorHint="@color/black"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:textColorHint="@color/black" />
 
     <TextView
         android:id="@+id/email"
@@ -55,8 +56,8 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="10dp"
         android:text="EMAIL"
-        android:textStyle="bold"
-        android:textColor="@color/purple_700" />
+        android:textColor="@color/purple_700"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/register_email"
@@ -69,9 +70,9 @@
         android:layout_marginRight="30dp"
         android:background="@color/btnedit"
         android:hint="ADD YOUR EMAIL..."
-        android:textColorHint="@color/black"
         android:inputType="textEmailAddress"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:textColorHint="@color/black" />
 
     <TextView
         android:id="@+id/pass"
@@ -81,8 +82,8 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="10dp"
         android:text="PASSWORD"
-        android:textStyle="bold"
-        android:textColor="@color/purple_700" />
+        android:textColor="@color/purple_700"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/register_password"
@@ -95,9 +96,9 @@
         android:layout_marginRight="30dp"
         android:background="@color/btnedit"
         android:hint="ADD YOUR PASSWORD..."
-        android:textColorHint="@color/colorBlack"
         android:inputType="textPassword"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:textColorHint="@color/colorBlack" />
 
     <Button
         android:id="@+id/register_button"
@@ -123,10 +124,10 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="23dp"
+        android:background="@color/colorWhite"
         android:text="@string/already_have_a_account_sign_in"
         android:textAlignment="center"
         android:textColor="@color/colorBlack"
-        android:background="@color/colorWhite"
         android:textSize="17sp"
         android:textStyle="bold" />
 

@@ -47,12 +47,12 @@ public class DashboardActivity extends AppCompatActivity {
                     return true;
 
                 case R.id.nav_profile:
-                    actionBar.setTitle("Profile User Page");
+                    actionBar.setTitle("Profile Page");
 
                     return true;
 
                 case R.id.nav_addblogs:
-                    actionBar.setTitle("Add Posts on Dashboard Page");
+                    actionBar.setTitle("Dashboard Posts");
 
                     return true;
 
