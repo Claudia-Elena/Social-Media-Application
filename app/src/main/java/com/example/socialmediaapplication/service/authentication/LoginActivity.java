@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
             getUserCredentials();
         });
 
-        newAccount.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegistrationActivity.class)));
+        newAccount.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegisterActivity.class)));
 
         recoverPassword.setOnClickListener(v -> showRecoverPasswordDialog());
     }

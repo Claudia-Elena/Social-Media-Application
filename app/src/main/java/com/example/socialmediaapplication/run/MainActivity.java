@@ -8,7 +8,7 @@ import android.os.Handler;
 
 import com.example.socialmediaapplication.R;
 import com.example.socialmediaapplication.service.authentication.LoginActivity;
-import com.example.socialmediaapplication.service.authentication.RegistrationActivity;
+import com.example.socialmediaapplication.service.authentication.RegisterActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(() -> {
             FirebaseUser user = mAuth.getCurrentUser();
             if (user == null) {
-                Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
                 finish();
             } else {
