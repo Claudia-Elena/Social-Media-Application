@@ -22,6 +22,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Objects;
 
+
+/**
+ * Created by LittleDuck
+ * Name of project: SocialMediaApplication
+ */
+
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText email, password, name;

@@ -1,5 +1,12 @@
 package com.example.socialmediaapplication.model;
 
+
+/**
+ * Created by LittleDuck
+ * Name of project: SocialMediaApplication
+ */
+
+
 public class ModelPostOnBoard {
 
     String postTime, postComments;

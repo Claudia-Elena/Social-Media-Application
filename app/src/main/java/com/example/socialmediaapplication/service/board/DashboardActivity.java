@@ -6,14 +6,18 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
+
 
 import com.example.socialmediaapplication.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;
+
+/**
+ * Created by LittleDuck
+ * Name of project: SocialMediaApplication
+ */
 
 public class DashboardActivity extends AppCompatActivity {
 

@@ -12,6 +12,13 @@ import com.example.socialmediaapplication.service.authentication.RegisterActivit
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+
+
+/**
+ * Created by LittleDuck
+ * Name of project: SocialMediaApplication
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     FirebaseUser currentUser;
