@@ -30,6 +30,7 @@ import java.util.Objects;
  * Created by LittleDuck
  * Name of project: SocialMediaApplication
  */
+
 public class LoginActivity extends AppCompatActivity {
     private EditText email;
     private EditText password;

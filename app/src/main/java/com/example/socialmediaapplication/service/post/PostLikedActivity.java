@@ -10,6 +10,7 @@ import com.example.socialmediaapplication.R;
  * Created by LittleDuck
  * Name of project: SocialMediaApplication
  */
+
 public class PostLikedActivity extends AppCompatActivity {
 
     @Override

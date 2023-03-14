@@ -6,6 +6,7 @@ package com.example.socialmediaapplication.model;
  * Name of project: SocialMediaApplication
  */
 
+
 public class ModelPostOnBoard {
 
     String postTime, postComments;
