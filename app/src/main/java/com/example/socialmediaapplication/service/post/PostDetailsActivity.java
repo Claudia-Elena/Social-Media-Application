@@ -5,6 +5,11 @@ import android.os.Bundle;
 
 import com.example.socialmediaapplication.R;
 
+/**
+ * Created by LittleDuck
+ * Name of project: SocialMediaApplication
+ */
+
 public class PostDetailsActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

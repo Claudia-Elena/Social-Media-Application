@@ -15,6 +15,11 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;
 
+/**
+ * Created by LittleDuck
+ * Name of project: SocialMediaApplication
+ */
+
 public class DashboardActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;

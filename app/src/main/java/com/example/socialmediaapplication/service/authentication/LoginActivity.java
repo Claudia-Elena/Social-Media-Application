@@ -26,6 +26,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Objects;
 
+/**
+ * Created by LittleDuck
+ * Name of project: SocialMediaApplication
+ */
 public class LoginActivity extends AppCompatActivity {
     private EditText email;
     private EditText password;
@@ -86,10 +90,13 @@ public class LoginActivity extends AppCompatActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Recover Password");
+
         LinearLayout linearLayout = new LinearLayout(this);
+        linearLayout.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
 
         final EditText mailTextField = new EditText(this);//write your registered email
-        mailTextField.setText("Email");
+        mailTextField.setHint("Email");
+        mailTextField.setBackgroundColor(getResources().getColor(android.R.color.holo_red_light));
         mailTextField.setMinEms(16);
         mailTextField.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
 
