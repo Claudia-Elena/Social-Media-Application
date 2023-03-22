@@ -6,9 +6,11 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 
 import com.example.socialmediaapplication.R;
+import com.example.socialmediaapplication.service.post.fragments.AddBlogFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -57,9 +59,12 @@ public class DashboardActivity extends AppCompatActivity {
 
                 case R.id.nav_addblogs:
                     actionBar.setTitle("Dashboard Posts");
+                    AddBlogFragment fragment4 = new AddBlogFragment();
+                    FragmentTransaction fragmentTransaction4 = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction4.replace(R.id.content, fragment4, "");
+                    fragmentTransaction4.commit();
 
                     return true;
-
             }
             return false;
         }
