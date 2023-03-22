@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.socialmediaapplication.R;
 import com.example.socialmediaapplication.service.post.fragments.AddBlogFragment;
+import com.example.socialmediaapplication.service.post.fragments.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -50,6 +51,10 @@ public class DashboardActivity extends AppCompatActivity {
                 case R.id.nav_home:
                     actionBar.setTitle("Home Page");
 
+                    HomeFragment fragment = new HomeFragment();
+                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.content, fragment, "");
+                    fragmentTransaction.commit();
                     return true;
 
                 case R.id.nav_profile:
