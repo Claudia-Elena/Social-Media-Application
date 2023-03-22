@@ -13,17 +13,14 @@ import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -70,7 +67,7 @@ public class AddBlogFragment extends Fragment {
 
         title = view.findViewById(R.id.ptitle);
         des = view.findViewById(R.id.pdes);
-        upload = view.findViewById(R.id.pupload);
+        upload = view.findViewById(R.id.upload);
         pd = new ProgressDialog(getContext());
         pd.setCanceledOnTouchOutside(false);
 
